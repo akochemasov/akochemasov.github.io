@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input field</title>
+
+    <style>
+        .inputItem {
+
+        }
+
+        .inputItem::-ms-clear {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input id="inputItem" type="text" class="inputItem" placeholder="Enter an amount" onchange="inputChange()" onclick="inputClick()" onsearch="inputSearch()" oninput="inputInput()">
+    <input id="btnItem" type="submit" value="Ok">
+
+    <script src="script.js"></script>
+</body>
+</html>

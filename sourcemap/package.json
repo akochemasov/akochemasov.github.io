@@ -1,0 +1,23 @@
+{
+  "name": "sourcemaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uglifyjs": "./node_modules/.bin/uglifyjs",
+    "clean": "rm -rf src/*/app.min.js src/*/app.min.js.map",
+
+    "compress": "npm run clean && cd src/js && uglifyjs app.js user.js --compress --mangle --output app.min.js --source-map url=app.min.js.map",    
+    "compress:wlink": "npm run clean && cd src/js && uglifyjs app.js user.js --compress --mangle --output app.min.js --source-map",
+    "compress:wmap": "npm run clean && cd src/js && uglifyjs app.js user.js --compress --mangle --output app.min.js",
+
+    "compress:min": "npm run clean && uglifyjs src/js/app.js src/js/user.js --compress --mangle --output src/min/app.min.js --source-map url=app.min.js.map,includeSources",
+    "compress:min-wlink": "npm run clean && uglifyjs src/js/app.js src/js/user.js --compress --mangle --output src/min/app.min.js --source-map includeSources"
+  },
+  "author": "Alexander Kochemasov",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^3.4.9"
+  }
+}

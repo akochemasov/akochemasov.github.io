@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll</title>
+
+    <style>
+        body {
+            height: 3000px;
+            border: 1px solid red;
+        }
+
+        .btns {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button id="btnScroll">scroll</button>
+        <button id="btnScrollBy">scrollBy</button>
+        <button id="btnScrollTo">scrollTo</button>
+    </div>
+
+    <script>
+        document.getElementById('btnScroll').onclick = function () {
+            window.scroll(0, 100);  //прокрутить к 100px
+        };
+
+        document.getElementById('btnScrollBy').onclick = function () {
+            window.scrollBy(0, 100);    //прокрутить на 100px
+        };
+
+        document.getElementById('btnScrollTo').onclick = function () {
+            window.scrollTo(0, 100);    //прокрутить
+        }
+    </script>
+</body>
+</html>
