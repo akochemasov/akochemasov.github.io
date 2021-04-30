@@ -18,11 +18,11 @@ function getParams() {
 const params = getParams();
 
 console.log('text', params.text);
+//конвертируем сначала текст через btoa() - вставляем в querystring
+//читаем через atob
 if (params.text) {
-  //const str = params.text;
-  const str = params.text.replaceAll('@', '=');
-  const str2 = window.decodeURIComponent(str);
-  console.log(str2)
+  const str = params.text;
+  const str2 = atob(str);
 
   document.getElementById('result').innerHTML = str2;
 }
