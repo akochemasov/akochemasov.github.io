@@ -22,7 +22,7 @@ console.log('text', params.text);
 //читаем через atob
 if (params.text) {
   const str = params.text;
-  const str2 = atob(str);
+  const str2 = atob(decodeURI(str));
 
   document.getElementById('result').innerHTML = str2;
 }
